@@ -1,0 +1,21 @@
+databases:
+  - name: isaka_DB
+    databaseName: isaka_db
+    user: isaka
+    region: singapore
+
+services:
+  - type: web
+    name: isaka
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: isaka_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
