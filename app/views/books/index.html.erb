@@ -20,7 +20,7 @@
     <div id="search">
     <h3>特徴</h3>
     <%= form_tag({controller:"books",action:"index"}, method: :get) do %>
-    <%= select_tag :search , raw("<option>選択してください</option><option>エッセイ</option>"), id: 'classes' %>
+    <%= select_tag :search , raw("<option>選択してください</option><option>エッセイ</option><option>連作短編集</option><option>陣内シリーズ</option>"), id: 'classes' %>
     <%= submit_tag '検索する'  %>
     <% end %>
     </div>
