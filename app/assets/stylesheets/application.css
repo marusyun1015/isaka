@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* *:全体、#○○:id、.○○：class、そのまま○○：タグ */
+ * {
+    padding: 0;
+    margin: 0;
+  }
+
+
+#header-list {
+    background-color: #bef183;
+    height: 150px;
+    display: flex;
+    flex-direction:column;
+}
+
+#header-logo{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  font-size: 15pt;
+  text-decoration: none;
+}
+
+#header-content{
+  margin-left: auto;
+  margin-right: auto;
+  display : flex;
+  font-size: 15pt;
+}
+
+footer {
+  color: white;
+  height: 100px;
+  background-color: #96e3e9;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;/* ←絶対位置 */
+  margin-top:10px;
+  }
+
+li {
+  list-style: none;
+  }
+
+ul{
+  display : flex;
+  column-gap: 100px;
+}
+
+.footerFixed{
+  min-height: 100vh; /* ←コンテンツの高さの最小値＝ブラウザの高さに指定 */
+  position: relative;/* ←相対位置 */
+  padding-bottom: 100px; /* ←フッターの高さを指定 */
+  box-sizing: border-box;
+  /* ↑ヘッダーやフッターを含むすべての要素の高さ＝min-height:100vhになるように指定 */
+}
+
+.content{
+  padding:10px;
+  text-decoration: none;
+}
+
+.content:hover {
+  color: rgb(0, 0, 0);
+  border-bottom: solid;
+}
+
+a>li{
+  font-size: 20px;
+}
+

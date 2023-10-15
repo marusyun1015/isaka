@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Isaka</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'books', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+    </head>
+
+    <div id="search">
+    <h3>映画化</h3>
+    <%= form_tag({controller:"books",action:"index"}, method: :get) do %>
+    <%= select_tag :search , raw("<option>選択してください</option><option>している</option><option>していない</option>"), id: 'classes' %>
+    <%= submit_tag '検索する'  %>
+    <% end %>
+    </div>
+
+    <div id="search">
+    <h3>特徴</h3>
+    <%= form_tag({controller:"books",action:"index"}, method: :get) do %>
+    <%= select_tag :search , raw("<option>選択してください</option><option>エッセイ</option>"), id: 'classes' %>
+    <%= submit_tag '検索する'  %>
+    <% end %>
+    </div>
+
+    <div class="all">
+        <div class="allbooks">
+
+        <% @books.each do |t| %>
+            <div class="box books-container">
+
+                <div class="book">
+                <%# 投稿者：<%= link_to t.user.name, user_path(t.user.id) %>
+                    <div class="title">
+                        <a> <%= link_to t.title, book_path(t.id) %></a><br>
+                        <%= t.point %>
+                    </div>
+                        
+                <%# 映画化：<%= t.movie %>
+                <%# 出版年：<%= t.year %>
+                <%# 映画化、出版年は詳細ページに記載 %>
+                    <div class="book-picture">
+                        <%= image_tag t.image_url, size: "210x297" if t.image? %>
+                    </div>
+                </div>
+                <div class="story">
+                    <%= t.story %>
+                </div>
+
+            <% if user_signed_in? %>
+                <% if current_user.already_liked?(t) %>
+                    <%= link_to book_like_path(id: t.id, book_id: t.id), method: :delete do %>
+                        <p>「読んだ」を取り消す <%= t.likes.count %></p>
+                    <% end %>
+                <% else %>
+                    <%= link_to book_likes_path(id: t.id, book_id: t.id), method: :post do %>
+                        <p>読んだ <%= t.likes.count %></p>
+                    <% end %>
+                <% end %>
+            <% else %>
+                <p>「読んだ」の数 : </p><%= t.likes.count %>
+            <% end %>
+
+            <% if user_signed_in? %>
+                <% if current_user.already_wanted?(t) %>
+                    <%= link_to book_want_path(id: t.id, book_id: t.id), method: :delete do %>
+                        <p>「読んでみたい」を取り消す <%= t.wants.count %></p>
+                    <% end %>
+                <% else %>
+                    <%= link_to book_wants_path(id: t.id, book_id: t.id), method: :post do %>
+                        <p>読んでみたい <%= t.wants.count %></p>
+                        <br>
+                    <% end %>
+                <% end %>
+            <% else %>
+                <p>「読んでみたい」の数 : </p><%= t.wants.count %>
+            <% end %>
+            <% if user_signed_in? %>
+                <% if current_user.admin==true %> 
+                    <%= t.created_at %>
+                    <%# <%= link_to "詳細へ", book_path(t.id) %> 
+                    <%= link_to "編集する", edit_book_path(t.id) %>
+                    <%= button_to "削除する", book_path(t.id), method: :delete %>
+                    <br>
+                <%end%>
+            <%end%>
+            </div>
+
+            <% end %>
+        </div>
+        <div class='box ranking'>
+            <div class="liked">
+                <% rank=1 %>
+                「読んだ」ランキング<br>
+                    <% @liked.each do |t| %>
+                        第<%= rank %>位 <a> <%= link_to t.title, book_path(t.id) %></a><br>
+                        <% rank+=1 %>
+                    <% end %>
+                    <br>
+            </div>
+            <div class="wanted">
+                <% rank=1 %>
+                「読んでみたい」ランキング<br>
+                <% @wanted.each do |t| %>
+                        第<%= rank %>位 <a> <%= link_to t.title, book_path(t.id) %></a><br>
+                        <% rank+=1 %>
+                    <% end %>
+            </div>
+        </div>
+    </div>
+</html>
+

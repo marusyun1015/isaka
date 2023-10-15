@@ -1,0 +1,62 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// index
+.books-container{
+    background-color: aqua;
+    width: 700px;
+    text-align : center;
+    margin: 10px 20px;
+    padding: 20px 0 0 8px;
+    border-radius: 30px;
+}
+
+.title{
+    background-color: aliceblue;
+    margin: 10px 50px;
+}
+
+.book-picture{
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 30px 150px;
+}
+
+.story{
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 0px 50px 10px;
+}
+
+.ranking{
+    background-color: aliceblue;
+    height: 500px;
+    width: 700px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.allbooks{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.all{
+    display:flex;
+}
+
+#search{
+    margin: 10px;
+}
+
+.button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+// ここまで
+

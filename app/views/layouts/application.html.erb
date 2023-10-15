@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Isaka</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+</head>
+
+<div class="footerFixed">
+  <body>
+  <header>
+    <div id="header-list">
+      <div id="header-logo">
+        <h1><li><%= link_to "Isaka kotaro", books_path %></li></h1>
+      </div>
+      <div id="header-content">
+        <nav>
+          <ul>
+            <% if user_signed_in? %>
+              <a><li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete,class: "button content" %></li></a>
+            <% else %>
+              <a><li><%= link_to '新規登録', new_user_registration_path,class: "content" %></li></a>
+              <a><li><%= link_to "ログイン", new_user_session_path,class: "content" %></li></a>
+            <% end %>
+            
+            <% if user_signed_in? %>
+            <% if current_user.admin==true %>
+            <a><li><%= link_to "新規投稿へ", new_book_path,class: "content" %></li></a>
+            <% end %>
+      
+            <a><li><%= link_to "おすすめの本診断", perfumes_path(current_user.id),class: "content" %></li></a>
+            <a><li><%= link_to "マイページへ", user_path(current_user.id),class: "content" %></li></a>
+            <% end %>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    <p>Copyright © GeekSalon All Rights Reserved.</p>
+  </footer>
+  </body>
+</div>
+</html>

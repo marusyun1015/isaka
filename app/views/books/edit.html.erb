@@ -1,0 +1,11 @@
+<h1>Isaka kotaro</h1>
+
+<%= form_for @book do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :size => 140 %> 
+
+  <%= f.label :story %>
+  <%= f.text_field :story, :size => 140 %> 
+
+  <%= f.submit "編集する" %>
+<% end %>

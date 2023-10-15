@@ -1,0 +1,71 @@
+<%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
+            <div class="container-sindan">
+                <div class="row">
+                    <div class="Q1-3">
+                        <div class="Q1">
+                            <div class="col-12">
+                                <p>Q1. 本は…</p>
+                            </div>
+                            <div class="col-6">
+                                <p><%= f.check_box :question, {multiple: true}, "1", nil %>よく読む</p>
+                            </div>
+                            <div class="col-6">
+                                <p><%= f.check_box :question, {multiple: true}, "2", nil %>あまり読まない</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="Q2">
+                            <div class="col-12">
+                                <p>Q2. 伊坂幸太郎の本は…</p>
+                            </div>
+                            <div class="col-6">
+                                <p><%= f.check_box :question, {multiple: true}, "1", nil %>読んだことがる</p>
+                            </div>
+                            <div class="col-6">
+                                <p><%= f.check_box :question, {multiple: true}, "2", nil %>読んだことがない</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="Q3">
+                            <div class="col-12">
+                                <p>Q3. どちらかというと…</p>
+                            </div>
+                            <div class="col-6">
+                                <p><%= f.check_box :question, {multiple: true}, "1", nil %>忍耐強い方だ</p>
+                            </div>
+                            <div class="col-6">
+                                <p><%= f.check_box :question, {multiple: true}, "2", nil %>新しいことに手を出す方だ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Q4-6">
+                        <div class="Q4">
+                            <div class="col-12">
+                                <p>Q4. 新しいことにチャレンジすることは…</p>
+                            </div>
+                            <div class="col-6">
+                                <p><%= f.check_box :question, {multiple: true}, "1", nil %>好きな方だ</p>
+                            </div>
+                            <div class="col-6">
+                                <p><%= f.check_box :question, {multiple: true}, "2", nil %>苦手な方だ</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="Q5">
+                            <div class="col-12">
+                                <p>Q5. どちらかというと…</p>
+                            </div>
+                            <div class="col-6">
+                                <p><%= f.check_box :question, {multiple: true}, "1", nil %>現実的な方だ</p>
+                            </div>
+                            <div class="col-6">
+                                <p><%= f.check_box :question, {multiple: true}, "2", nil %>よく空想する方だ</p>
+                            </div>
+                        </div>
+                         <div class="sindanbotan">
+                            <%= f.submit "post" %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<% end %>

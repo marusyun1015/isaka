@@ -1,0 +1,85 @@
+<h1>Isaka kotaro</h1>
+<h3>詳細</h3>
+<div class="book">
+ <p><%= @book.title %></p>
+
+  <p><%= @book.created_at %></p>
+    <% if user_signed_in? %>
+      <% if current_user.already_liked?(@book) %>
+        <%= link_to book_like_path(@book), method: :delete do %>
+          <p>「読んだ」を取り消す</p><%= @book.likes.count %>
+        <% end %>
+      <% else %>
+        <%= link_to book_likes_path(@book), method: :post do %>
+          <p>読んだ</p><%= @book.likes.count %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <p>「読んだ」の数 = </p><%= @book.likes.count %>
+    <% end %>
+<% if user_signed_in? %>
+  <% if current_user.admin==true %> 
+    <%= link_to "編集する", edit_book_path(@book.id) %>
+  <% end %>
+<% end %>
+
+</div>
+
+<h2>「読んだ」したユーザー</h2>
+<% @book.liked_users.each do |user| %>
+  <li><%= user.name %></li>
+<% end %>
+
+<div class="book">
+ <p><%= @book.movie %></p>
+
+  <p><%= @book.created_at %></p>
+    <% if user_signed_in? %>
+      <% if current_user.already_wanted?(@book) %>
+        <%= link_to book_want_path(@book), method: :delete do %>
+          <p>「読んでみたい」を取り消す</p><%= @book.wants.count %>
+        <% end %>
+      <% else %>
+        <%= link_to book_wants_path(@book), method: :post do %>
+          <p>読んでみたい</p><%= @book.wants.count %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <p>「読んでみたい」の数 = </p><%= @book.wants.count %>
+    <% end %>
+<% if user_signed_in? %>
+  <% if current_user.admin==true %>
+  <%= link_to "編集する", edit_book_path(@book.id) %>
+  <% end %>
+<% end %>
+</div>
+
+<h2>「読んでみたい」したユーザー</h2>
+<% @book.wanted_users.each do |user| %>
+  <li><%= user.name %></li>
+<% end %>
+
+<div class="comment-wrapper">
+  <p>コメント一覧</p>
+  <% @comments.each do |c| %>
+    <div>
+      <%= c.user.name unless c.user.blank? %>
+      <br>
+      <%= c.content %>
+    </div>
+      <br>
+  <%= button_to "削除する", book_comment_path(c.id), method: :delete %>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@book, @comment], local: true) do |f| %>
+      <%= f.text_area :content %>
+      <%= button_tag type: "submit" do %>
+        <i class="far fa-comments"></i> コメントする
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+
+<%= link_to "一覧に戻る", books_path %>

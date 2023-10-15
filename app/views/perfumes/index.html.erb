@@ -1,0 +1,30 @@
+<!DOCTYPE html> <!--この文章がHTML文章であることを伝える要素です。-->
+<html lang="ja"><!--言語の指定-->
+    <head>
+    <meta charset="utf-8">
+    <title>香水診断スタート</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'perfumes', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+    </head>
+
+    <body>
+    <div class="recommendation">        
+        <div class="recommendation-inbox">
+            <h2></h2>
+        </div>
+            <div class="h3">
+                <h3>Are you ready?</h3>
+            </div>
+            <div class="start">
+                <a><%= link_to "➡➡診断を始める", new_perfume_path %></a>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
+
+
+

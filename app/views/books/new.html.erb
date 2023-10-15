@@ -1,0 +1,45 @@
+<h1>Isaka kotaro</h1>
+<h3>新刊投稿</h3>
+<%= form_for @book do |f| %>
+
+<%# # データ型がstringで自由記述の入力フォーム %>
+  <div class="field">
+    <%= f.label :タイトル %>
+    <%= f.text_field :title, :size => 30 %>
+  </div>
+
+<%# データ型がstringで選択式の入力フォーム %>
+  <div class="field">
+    <%= f.label :映画化  %>
+    <%= f.select :movie, 
+    [["している", "している"], 
+    ["していない", "していない"], ], include_blank: "選択して下さい" %>
+  </div>
+
+<%# データ型がintegerで数字のみを入力するフォーム %>
+  <div class="field">
+    <%= f.label :出版年  %>
+    <%= f.number_field :year, :size => 10 %>
+  </div>
+
+<%# データ型がtextで自由記述の入力フォーム %>
+  <div class="field">
+    <%= f.label :あらすじ（簡単に）  %>
+    <%= f.text_area :story, :size => "30x2" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :特徴 %>
+    <%= f.text_field :point, :size => 30 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <%= f.submit "新刊を投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", books_path %>
+
