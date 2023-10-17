@@ -30,85 +30,586 @@
 
 <h2>診断結果一覧</h2>
 <% @user.perfumes.each do |t| %>
-                <% if t.question == "1111" %>
-                <h6>レモン</h6>
-                <p>柑橘系の代表的な原料</p>
-                <p>清涼感があり、爽やかな印象</p>
+                <% if @perfume.question == "11111" %>
+                    <div class="books-container-2">
+                        <div class="book-2">
+                            <div class="title-2">
+                                <a> <a href="/books/7">アヒルと鴨のコインロッカー</a></a><br>
+                                特徴：叙述トリック
+                            </div>
+                            <div class="book-picture-2">
+                                <img ssl_detected="false" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1695471668/kwhqoor3wzyockraggfk.jpg" />
+                            </div>
+                        </div>
+                        <div class="story-2">
+                        ボブ・ディランはまだ鳴っているんだろうか?引っ越してきたアパートで出会ったのは、悪魔めいた印象の長身の青年。初対面だというのに、彼はいきなり「一緒に本屋を襲わないか」と持ちかけてきた。彼の標的は――たった1冊の広辞苑!? そんなおかしな話に乗る気などなかったのに、なぜか僕は決行の夜、モデルガンを手に書店の裏口に立ってしまったのだ! 清冽な余韻を残す傑作ミステリ。第25回吉川英治文学新人賞受賞。
+                
+                        </div>
+                    </div>
 
-                <% elsif t.question == "1112" %>
-                <h6>シトラス</h6>
-                <p>オレンジに似た柑橘系の果物</p>
-                <p>リラックス効果がある</p>
+                <% elsif @perfume.question == "11112" %>
+                <div class="box books-container-2">
 
-                <% elsif t.question == "1121" %>
-                <h6>ローズ</h6>
-                <p>華やかで上品な香り</p>
-                <p>ストレスを緩和してくれる効果がある</p>
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/2">3652</a></a><br>
+                        特徴：エッセイ
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697371419/qfdsgeebt80xlothvekx.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    エッセイが得意ではありません――。自らはそう語る伊坂幸太郎がデビュー以来ぽつぽつと発表した106編のエッセイ。愛する小説、映画、音楽のこと。これまた苦手なスピーチのこと。そして、憧れのヒーローのこと。趣味を語る中にも脈々と流れる伊坂的思考と、日常を鮮やかに切り取る文体。15年間の「小説以外」を収録した、初のエッセイ集。裏話満載のインタビュー脚注つき。
+                </div>
 
-                <% elsif t.question == "1122" %>
-                <h6>ラベンダー</h6>
-                <p>優しく女性らしい香り</p>
-                <p>気持ちを落ち着かせてくれる</p>
+                    </div>
 
-                <% elsif t.question == "1211" %>
-                <h6>ジャスミン</h6>
-                <p>爽やかなのに官能的な香り</p>
-                <p>幸福感を得やすい</p>
+                    引っ越してきたアパートで出会ったのは、悪魔めいた印象の長身の青年。初対面だというのに、彼はいきなり「一緒に本屋を襲わないか」と持ちかけてきた。彼の標的は――たった1冊の広辞苑!? そんなおかしな話に乗る気などなかったのに、なぜか僕は決行の夜、モデルガンを手に書店の裏口に立ってしまったのだ! 清冽な余韻を残す傑作ミステリ。第25回吉川英治文学新人賞受賞。
+                    </div>
 
-                <% elsif t.question == "1212" %>
-                <h6>ピーチ</h6>
-                <p>フレッシュで優しい香り</p>
-                <p>アンチエイジングにも最適</p>
+                <% elsif @perfume.question == "11211" %>
+                  <div class="box books-container-2">
 
-                <% elsif t.question == "1221" %>
-                <h6>アップル</h6>
-                <p>特徴的で甘い香り</p>
-                <p>万人受けしやすい</p>
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/3">AX</a></a><br>
+                        特徴：殺し屋シリーズ
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697371566/eltkc0smwzgjkvqmiba0.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    最強の殺し屋は――恐妻家。
 
-                <% elsif t.question == "1222" %>
-                <h6>ユーカリ</h6>
-                <p>しっかりとした優しい香り</p>
-                <p>浄化作用があり。気持ちを落ち着かせてくれる</p>
+物騒な奴がまた現れた！
+物語の新たな可能性を切り開く、エンタテインメント小説の最高峰！
 
-                <% elsif t.question == "2111" %>
-                <h6>ローズマリー</h6>
-                <p>きりりとした強めの香りが特徴的</p>
-                <p>美容効果が高い</p>
+「兜」は超一流の殺し屋だが、家では妻に頭が上がらない。
+一人息子の克巳もあきれるほどだ。
+兜がこの仕事を辞めたい、と考えはじめたのは、克巳が生まれた頃だった。
+引退に必要な金を稼ぐため、仕方なく仕事を続けていたある日、爆弾職人を軽々と始末した兜は、意外な人物から襲撃を受ける。
+こんな物騒な仕事をしていることは、家族はもちろん、知らない。
+                </div>
 
-                <% elsif t.question == "2112" %>
-                <h6>ベルガモット</h6>
-                <p>柑橘系の果実</p>
-                <p>甘くてフレッシュな、万能な香料</p>
+                <% elsif @perfume.question == "11122" %>
+                <div class="box books-container-2">
 
-                <% elsif t.question == "2121" %>
-                <h6>ムスク</h6>
-                <p>雄のジャコウジカの腹部にある香嚢から抽出した香料</p>
-                <p>官能的で重い香り</p>
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/4">PK</a></a><br>
+                        特徴：連作短編集
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697371735/vuekfnipayc8lyf2ywpo.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    人は時折、勇気を試される。
+落下する子供を、間一髪で抱きとめた男。
+その姿に鼓舞された少年は、年月を経て、今度は自分が試される場面に立つ。
+勇気と臆病が連鎖し、絡み合って歴史は作られ、小さな決断がドミノを倒すきっかけをつくる。
+三つの物語を繋ぐものは何か。
+読み解いた先に、ある世界が浮かび上がる。
+                </div>
 
-                <% elsif t.question == "2122" %>
-                <h6>アンバー</h6>
-                <p>マッコウクジラの結石から抽出した香料</p>
-                <p>魅惑的で色気のある香り</p>
+                <% elsif @perfume.question == "11211" %>
+                     <div class="box books-container-2">
 
-                <% elsif t.question == "2211" %>
-                <h6>シナモン</h6>
-                <p>甘いスパイスの香り</p>
-                <p>香水のアクセントとしてよく使われる</p>
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/5">SOSの猿</a></a><br>
+                        特徴：登場人物が特徴的
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697371891/nqxbkzqwsk9s4shvtaiv.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    三百億円の損害を出した株の誤発注事件を追う「猿の話」。ひきこもりを悪魔祓いで治そうとする男の「私の話」。やがて交差する二つの話を孫悟空が自在に飛び回り、「ＳＯＳ」をめぐる問いかけが物語を深化する。世界最強の猿からユングまでを召還し、小説の可能性に挑戦した、著者入魂の記念碑的長篇！
+                </div>
 
-                <% elsif t.question == "2212" %>
-                <h6>バニラ</h6>
-                <p>甘くて官能的な香り</p>
-                <p>上品で年齢を問わず人気が高い</p>
+                <% elsif @perfume.question == "11212" %>
+                 <div class="box books-container-2">
 
-                <% elsif t.question == "2221" %>
-                <h6>イランイラン</h6>
-                <p>色気のある濃厚で甘い香り</p>
-                <p>恋愛に効果があり</p>
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/6">アイネクライネナハトムジーク</a></a><br>
+                        特徴：連作短編集
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697371999/bdltdxvhhiuj5mt06n1p.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    妻に出て行かれたサラリーマン、声しか知らない相手に恋する美容師、元いじめっ子と再会してしまったOL……。人生は、いつも楽しいことばかりじゃない。でも、運転免許センターで、リビングで、駐輪場で、奇跡は起こる。情けなくも愛おしい登場人物たちが仕掛ける、不器用な駆け引きの数々。明日がきっと楽しくなる、魔法のような連作短編集。
+                </div>
 
-                <% elsif t.question == "2222" %>
-                <h6>サンダルウッド</h6>
-                <p>お香としてよく使われる白檀の香り</p>
-                <p>集中力を高める効果もあり</p>
+
+                <% elsif @perfume.question == "11221" %>
+   <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/8">あるキング</a></a><br>
+                        特徴：群像劇
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697372792/ym323bbmcdkg2dtsxflq.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    山田王求。プロ野球チーム「仙醍キングス」を愛してやまない両親に育てられた彼は、超人的才能を生かし野球選手となる。本当の「天才」が現れたとき、人は“それ”をどう受け取るのか――。群像劇の手法で王を描いた雑誌版。シェイクスピアを軸に寓話的色彩を強めた単行本版。伊坂ユーモアたっぷりの文庫版。同じ物語でありながら、異なる読み味の三篇をすべて収録した「完全版」。
+                </div>
+
+                <% elsif @perfume.question == "11222" %>
+
+            <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/20">ジャイロスコープ</a></a><br>
+                        特徴：短編集
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697374375/qutcqkp8lfhavwedguof.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    助言あり〼(ます)――。スーパーの駐車場で“相談屋”を営む稲垣さんの下で働くことになった浜田青年。人々のささいな相談事が、驚愕の結末に繋がる「浜田青年ホントスカ」。バスジャック事件を巡る“もし、あの時……”を描く「if」。文学的挑戦を孕んだ「ギア」。洒脱な会話、軽快な文体、そして独特のユーモアが詰まった七つの伊坂ワールド。書下ろし短編「後ろの声がうるさい」収録。
+                </div>
+
+                <% elsif @perfume.question == "12111" %>
+                  <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/21">チルドレン</a></a><br>
+                        特徴：陣内シリーズ　連作短編集
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697374455/acihhdaeroiorsllawaz.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    
+「俺たちは奇跡を起こすんだ」独自の正義感を持ち、いつも周囲を自分のペースに引き込むが、なぜか憎めない男、陣内。彼を中心にして起こる不思議な事件の数々――。何気ない日常に起こった５つの物語が、一つになったとき、予想もしない奇跡が降り注ぐ。ちょっとファニーで、心温まる連作短編の傑作。
+                </div>
+                <% elsif @perfume.question == "12112" %>
+                
+            <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/22">バイバイ、ブラックバード</a></a><br>
+                        特徴：連作短編集
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697374919/ymwcuezkcmgp81prcpoo.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    星野一彦の最後の願いは、何者かに〈あのバス〉で連れていかれる前に、五人の恋人たちに別れを告げること。
+そんな彼の見張り役は「常識」「愛想」「悩み」「色気「上品」──
+これらの単語を黒く塗り潰したマイ辞書を持つ粗暴な大女、繭美。
+ふたりのなんとも不思議な数週間を描く、おかしみに彩られた「グッド・バイ」ストーリー 。
+                </div>
+
+                <% elsif @perfume.question == "12121" %>
+                <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/9">オー！ファーザー！</a></a><br>
+                        特徴：登場人物が特徴的
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697372898/c2n39n1irv2ydz7f9akm.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    俺たちはいつだって、何かの試験前にいるんだ。人生は試験の連続だ。
+
+一人の息子に父親が四人いる!? 由紀夫を守る父親〝四人組〞は賭博好きに女好き、博学卓識にスポーツ万能。事件が事件を呼ぶ、痛快家族エンタ!
+
+一人息子に四人の父親!? 由紀夫を守る四銃士は、ギャンブル好きに女好き、博学卓識、スポーツ万能。個性溢れる父×4に囲まれて、高校生が遭遇するは、事件、事件、事件――。知事選挙、不登校の野球部員、盗まれた鞄と心中の遺体。多声的な会話、思想、行動が一つの像を結ぶとき、思いもよらぬ物語が、あなたの眼前に姿を現す。伊坂ワールド第一期を締め括る、面白さ400%の長篇小説。
+                </div>
+                <% elsif @perfume.question == "12122" %>
+                 <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/11">ガソリン生活</a></a><br>
+                        特徴：登場人物が特徴的
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697373049/j5lljwlnjzryvshza3ty.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    聡明な弟・亨と、のんきな兄・良男の でこぼこ兄弟が
+ドライブ中に乗せたある女優が、翌日急死!
+一家はさらなる謎に巻き込まれ…!?
+
+車同士が楽しくおしゃべりする
+唯一無二の世界で繰り広げられる仲良し家族の冒険譚!
+愛すべきオフビート長編ミステリー。
+                </div>
+                <% elsif @perfume.question == "12212" %>
+                  <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/12">キャプテンサンダーボルト</a></a><br>
+                        特徴：合作
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697373134/n1qibsz0y2hniodwz9db.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    俺とお前が一緒なら世界だって変えられる。発端は山形のホテルだった。借金返済のため一攫千金を狙う相葉時之は、手違いからテロリストに命を狙われる羽目に。絶体絶命の中、かつての級友・井ノ原悠と再会したことで、物語が動き出す──。蔵王・御釜が発生源とされる感染症「村上病」。同地に墜落したB29。そして、公開中止になった特撮映画。深まる謎と追走劇の果て、明かされる真相とは?書き下ろし短編を収録した新装版。
+                </div>
+                <% elsif @perfume.question == "12221" %>
+                  <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/13">クジラアタマの王様</a></a><br>
+                        特徴：挿絵
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697373470/phyzr4xahfdknzicqgdo.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    記憶の片隅に残る、しかし、覚えていない「夢」。自分は何かと戦っている? ――製菓会社の広報部署で働く岸は、商品への異物混入問い合わせを先輩から引き継いだことを皮切りに様々なトラブルに見舞われる。悪意、非難、罵倒。感情をぶつけられ、疲れ果てる岸だったが、とある議員の登場で状況が変わる。そして、そこには思いもよらぬ「繋がり」があり……。伊坂マジック、鮮やかなる新境地。
+                </div>
+
+                <% elsif @perfume.question == "12222" %>
+                   <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/14">グラスホッパー</a></a><br>
+                        特徴：殺し屋シリーズ
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697373554/bljjifbnvummzdif22lr.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    「復讐を横取りされた。嘘？」元教師の鈴木は、妻を殺した男が車に轢かれる瞬間を目撃する。
+どうやら「押し屋」と呼ばれる殺し屋の仕業らしい。
+鈴木は正体を探るため、彼の後を追う。
+一方、自殺専門の殺し屋「鯨」、ナイフ使いの天才「蝉」も「押し屋」を追い始める。
+それぞれの思惑のもとに──。
+「鈴木」「鯨」「蝉」、三人の思いが交錯するとき、物語は唸りをあげて動き出す。
+疾走感溢れる筆致で綴られた、分類不能の「殺し屋」小説！
+                </div>
+
+                <% elsif @perfume.question == "21111" %>
+                 <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/15">クリスマスを探偵と</a></a><br>
+                        特徴：挿絵
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697373696/lr12k3quntgseh0e0b1j.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    舞台はドイツ、童話に出てくるような町、ローテンブルク。探偵カールがクリスマスの夜に出会った、不思議な男とは……？　伊坂幸太郎が初めて書いた小説が、自身の手により、20年の時を経て完全リメイク！　クリスマスを彩るにふさわしい、大人も子どもも楽しめるハートウォーミングな一篇です。デビュー10周年を記念して刊行された総特集ムック『文藝別冊　伊坂幸太郎』収録、作家の創作の原点となった物語。
+                </div>
+                <% elsif @perfume.question == "21112" %>
+                <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/18">サブマリン</a></a><br>
+                        特徴：陣内シリーズ
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697374214/ggseqadtp0elozqylnps.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    家裁調査官・陣内と武藤が出会う「少年たち」。報道される事件と、実情が違っていることは少なくない。『チルドレン』から、12年。罪と罰をめぐるものがたり。
+                </div>
+
+                <% elsif @perfume.question == "21121" %>
+                  <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/19">シーソーモンスター</a></a><br>
+                        特徴：登場人物が特徴的
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697374274/dfjaekjnj0sppfcjytvl.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    バブルに沸く昭和後期。一見、平凡な家庭の北山家では、元情報員の妻宮子が姑セツと熾烈な争いを繰り広げていた。（「シーソーモンスター」）
+アナログに回帰した近未来。配達人の水戸は、一通の手紙をきっかけに、ある事件に巻き込まれ、因縁の相手檜山に追われる。（「スピンモンスター」）
+
+時空を超えて繋がる二つの物語。「運命」は、変えることができるのか――。
+                </div>
+                <% elsif @perfume.question == "21122" %>
+                <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/23">フィッシュストーリー</a></a><br>
+                        特徴：中編集　黒澤
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697375089/bdbnlzuyaozfelqs6iot.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    最後のレコーディングに臨んだ、売れないロックバンド。「いい曲なんだよ。届けよ、誰かに」テープに記録された言葉は、未来に届いて世界を救う。時空をまたいでリンクした出来事が、胸のすくエンディングへと一閃に向かう瞠目の表題作ほか、伊坂ワールドの人気者・黒澤が大活躍の「サクリファイス」「ポテチ」など、変幻自在の筆致で繰り出される中篇四連打。爽快感溢れる作品集。
+                </div>
+                <% elsif @perfume.question == "21211" %>
+                 <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/24">オーデュボンの祈り</a></a><br>
+                        特徴：登場人物が特徴的　田中
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697375316/qvmyjlbowuh8umbilda9.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    コンビニ強盗に失敗し逃走していた伊藤は、気付くと見知らぬ島にいた。江戸以来外界から遮断されている“荻島&quot;には、妙な人間ばかりが住んでいた。嘘しか言わない画家、「島の法律として」殺人を許された男、人語を操り「未来が見える」カカシ。次の日カカシが殺される。無残にもバラバラにされ、頭を持ち去られて。未来を見通せるはずのカカシは、なぜ自分の死を阻止出来なかったのか?
+                </div>
+                <% elsif @perfume.question == "21212" %>
+                 <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/25">ゴールデンスランバー</a></a><br>
+                        特徴：疾走感　田中
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697375383/pcwmjophegh9bcsttyt4.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    衆人環視の中、首相が爆殺された。そして犯人は俺だと報道されている。なぜだ？　何が起こっているんだ？　俺はやっていない――。首相暗殺の濡れ衣をきせられ、巨大な陰謀に包囲された青年・青柳雅春。暴力も辞さぬ追手集団からの、孤独な必死の逃走。行く手に見え隠れする謎の人物達。運命の鍵を握る古い記憶の断片とビートルズのメロディ。スリル炸裂超弩級エンタテインメント巨編。
+                </div>
+                <% elsif @perfume.question == "21221" %>
+                   <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/26">フーガはユーガ</a></a><br>
+                        特徴：登場人物が特徴的
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697375470/svhfavzcdttkcpohsorr.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    伊坂幸太郎史上
+もっとも切なく、でも、あたたかい。
+
+僕たちは双子で、僕たちは不運で、
+だけど僕たちは、手強い
+双子の兄弟が織りなす、「闘いと再生」の物語
+
+常盤優我は仙台市内のファミレスで一人の男に語り出す。
+双子の弟・風我のこと、幸せでなかった子供時代のこと、
+そして、彼ら兄弟だけの、
+誕生日にだけ起きる不思議な現象、「アレ」のこと――。
+ふたりは大切な人々と出会い、
+特別な能力を武器に、
+邪悪な存在に立ち向かおうとするが……。
+                </div>
+                <% elsif @perfume.question == "21222" %>
+                   <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/27">ペッパーズ・ゴースト</a></a><br>
+                        特徴：登場人物が特徴的
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697375563/baydo4yxxtosrnpshhne.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    少しだけ不思議な力を持つ、中学校の国語教師・檀(だん)と、女子生徒の書いている風変わりな小説原稿。
+生徒の些細な校則違反をきっかけに、檀先生は思わぬ出来事に巻き込まれていく。
+伊坂作品の魅力が惜しげもなくすべて詰めこまれた、作家生活20年超の集大成！
+                </div>
+                <% elsif @perfume.question == "22111" %>
+                
+            <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/28">ホワイトラビット</a></a><br>
+                        特徴：黒澤
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697375679/jqkq1cvrlp2lueizci0h.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    兎田孝則は焦っていた。新妻が誘拐され、今にも殺されそうで、だから銃を持った。母子は怯えていた。眼前に銃を突き付けられ、自由を奪われ、さらに家族には秘密があった。連鎖は止まらない。ある男は夜空のオリオン座の神秘を語り、警察は特殊部隊 SIT を突入させる。軽やかに、鮮やかに。「白兎事件」は加速する。誰も知らない結末に向けて。驚きとスリルに満ちた、伊坂マジックの最先端!
+                </div>
+
+                <% elsif @perfume.question == "22112" %>
+                <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/29">マイクロスパイ・アンサンブル</a></a><br>
+                        特徴：登場人物が特徴的　連作短編集
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697375778/x9sde5egqsmtmnorqnzt.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    どこかの誰かが、幸せでありますように。
+失恋したばかりの社会人と、元いじめられっこのスパイ。
+知らないうちに誰かを助けていたり、誰かに助けられたり……。
+ふたりの仕事が交錯する現代版おとぎ話。
+
+付き合っていた彼女に振られた社会人一年生、
+どこにも居場所がないいじめられっ子、
+いつも謝ってばかりの頼りない上司……。
+
+でも、今、見えていることだけが世界の全てじゃない。
+優しさと驚きに満ちたエンターテイメント小説!
+
+猪苗代湖の音楽フェス「オハラ☆ブレイク」でしか手に入らなかった
+連作短編がついに書籍化!
+                </div>
+                <% elsif @perfume.question == "22121" %>
+                
+            <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/30">マリアビートル</a></a><br>
+                        特徴：殺し屋シリーズ
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697375877/m3w5o8wjl7egn20ntjlk.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    物騒な奴らが再びやってきた！　三年ぶりの書き下ろし長編登場!!
+
+酒浸りの元殺し屋「木村」。狡猾な中学生「王子」。腕利きの二人組「蜜柑」「檸檬」。運の悪い殺し屋「七尾」。物騒な奴らを乗せた新幹線は、北を目指し疾走する！　『グラスホッパー』に続く、殺し屋達の狂想曲。
+                </div>
+                <% elsif @perfume.question == "22211" %>
+                 <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/31">モダンタイムス</a></a><br>
+                        特徴：長編　田中
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697376119/gto5qb1d3d1ajmsrdh7s.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    (上巻）恐妻家のシステムエンジニア・渡辺拓海が請け負った仕事は、ある出会い系サイトの仕様変更だった。けれどもそのプログラムには不明な点が多く、発注元すら分からない。そんな中、プロジェクトメンバーの上司や同僚のもとを次々に不幸が襲う。彼らは皆、ある複数のキーワードを同時に検索していたのだった。
+
+(下巻）5年前の惨事──播磨崎中学校銃乱射事件。
+奇跡の英雄・永嶋丈は、いまや国会議員として権力を手中にしていた。
+もうひとつの検索ワードを追う渡辺拓海は安藤潤也にたどり着くが、
+事件との繋がりを見出せないまま、追い詰められていく。
+大きなシステムに覆われた社会で渡辺は自身の生き方を選び取れるのか。
+
+                </div>
+                <% elsif @perfume.question == "22212" %>
+                   <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/32">ラッシュライフ</a></a><br>
+                        特徴：叙述トリック　黒澤
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697376213/cquca8bz7e95179lbvws.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    泥棒を生業とする男は新たなカモを物色する。父に自殺された青年は神に憧れる。女性カウンセラーは不倫相手との再婚を企む。職を失い家族に見捨てられた男は野良犬を拾う。幕間には歩くバラバラ死体登場――。並走する四つの物語、交錯する十以上の人生、その果てに待つ意外な未来。不思議な人物、機知に富む会話、先の読めない展開。巧緻な騙し絵のごとき現代の寓話の幕が、今あがる。
+                </div>
+                <% elsif @perfume.question == "22221" %>
+                 <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/33">火星に住むつもりかい？</a></a><br>
+                        特徴：登場人物が特徴的
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697376451/hdvukpqdfznzjonta3r1.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    「安全地区」に指定された仙台を取り締まる「平和警察」。その管理下、住人の監視と密告によって「危険人物」と認められた者は、衆人環視の中で刑に処されてしまう。不条理渦巻く世界で窮地に陥った人々を救うのは、全身黒ずくめの「正義の味方」、ただ一人。ディストピアに迸るユーモアとアイロニー。伊坂ワールドの醍醐味が余すところなく詰め込まれたジャンルの枠を超越する傑作!
+                </div>
+
+                <% elsif @perfume.question == "22222" %>
+                <div class="box books-container-2">
+
+                <div class="book-2">
+                    <div class="title-2">
+                        <a> <a href="/books/34">逆ソクラテス</a></a><br>
+                        特徴：短編集
+                    </div>
+                        
+                    <div class="book-picture-2">
+                        <img ssl_detected="true" width="210" height="297" src="http://res.cloudinary.com/djpvqox3f/image/upload/v1697376557/cqy3oymp0roxtxuxgma4.jpg" />
+                    </div>
+                </div>
+                <div class="story-2">
+                    「敵は、先入観だよ」学力も運動もそこそこの小学6年生の僕は、転校生の安斎から、突然ある作戦を持ちかけられる。カンニングから始まったその計画は、クラスメイトや担任の先生を巻き込んで、予想外の結末を迎える。はたして逆転劇なるか!? 表題作ほか、「スロウではない」「非オプティマス」など、世界をひっくり返す無上の全5編を収録。最高の読後感を約束する、第33回柴田錬三郎賞受賞作。
+                </div>
+
+
 
                 <% end %>
  
