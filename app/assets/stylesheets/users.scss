@@ -1,3 +1,32 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.mypage-all{
+    display: flex;
+}
+
+.my-yomitai-yonda{
+    display: flex;
+}
+
+.information{
+    margin: 10px;
+}
+
+.my-yomitai{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+
+.my-yonda{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    justify-content: start;
+}
+
+.books-mypage{
+    margin: 10px;
+}
