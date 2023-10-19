@@ -31,10 +31,11 @@
 
 .box-ranking{
     background-color: aliceblue;
-    height: 400px;
-    width: 500px;
+    height: 250px;
+    width: 350px;
     padding: 10px;
     margin: 10px;
+    flex-shrink: 0;
 }
 
 .allbooks{
