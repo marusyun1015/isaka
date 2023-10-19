@@ -60,7 +60,7 @@
                     <% end %>
                 <% end %>
             <% else %>
-                <p>「読んだ」の数 : </p><%= t.likes.count %>
+                <p>「読んだ」の数 : <%= t.likes.count %></p>
             <% end %>
 
             <% if user_signed_in? %>
@@ -75,7 +75,7 @@
                     <% end %>
                 <% end %>
             <% else %>
-                <p>「読んでみたい」の数 : </p><%= t.wants.count %>
+                <p>「読んでみたい」の数 : <%= t.wants.count %></p>
             <% end %>
             <% if user_signed_in? %>
                 <% if current_user.admin==true %> 

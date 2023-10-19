@@ -81,7 +81,6 @@ ul{
 a:hover {
   color: rgb(0, 0, 0);
   border-bottom: solid;
-  background: rgb(0 0 0 /5%);
 }
 
 a>li{

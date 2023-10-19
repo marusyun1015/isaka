@@ -24,7 +24,7 @@
             <% end %>
             <% end %>
             <% else %>
-              <p>「読んだ」の数 = </p><%= @book.likes.count %>
+              <p>「読んだ」の数 = <%= @book.likes.count %></p>
           <% end %>
         <% if user_signed_in? %>
           <% if current_user.admin==true %> 
@@ -44,7 +44,7 @@
               <% end %>
             <% end %>
           <% else %>
-            <p>「読んでみたい」の数 = </p><%= @book.wants.count %>
+            <p>「読んでみたい」の数 = <%= @book.wants.count %></p>
           <% end %>
         <% if user_signed_in? %>
           <% if current_user.admin==true %>
