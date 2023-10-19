@@ -1,8 +1,8 @@
- <div class="intoro">
-        
-            <h5>診断結果</h5>
-            <p>あなたにおすすめの本は…</p>
-        </div>
+<div class="shindan-all">
+    <div class="intoro">
+            <h2>診断結果</h2><br>
+            <h3>あなたにおすすめの本は…</h3>
+    </div>
                 <% if @perfume.question == "11111" %>
                     <div class="books-container-2">
                         <div class="book-2">
@@ -587,7 +587,7 @@
                 <% end %>
 
         <%# <%= link_to "診断結果を保存する", book_results_path(id: t.id, book_id: t.id), method: :post do %> 
-        <%= link_to "一覧に戻る", books_path %>
+        <%# <%= link_to "一覧に戻る", books_path %> 
         <%= link_to 'この診断結果を保存する', perfumes_path(num: @result) , method: :delete %>
-
-        </div>
+    </div>
+</div>

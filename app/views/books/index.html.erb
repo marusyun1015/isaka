@@ -20,7 +20,7 @@
     <div id="search">
     <h3>特徴</h3>
     <%= form_tag({controller:"books",action:"index"}, method: :get) do %>
-    <%= select_tag :search , raw("<option>選択してください</option><option>エッセイ</option><option>連作短編集</option><option>陣内シリーズ</option>"), id: 'classes' %>
+    <%= select_tag :search , raw("<option>選択してください</option><option>叙述トリック</option><option>エッセイ</option><option>陣内シリーズ</option><option>殺し屋シリーズ</option><option>陽気なギャグシリーズ</option><option>登場人物が特徴的</option><option>群像劇</option><option>短編集</option><option>連作短編集</option><option>中編集</option><option>長編</option><option>合作</option><option>挿絵</option><option>黒澤</option><option>田中</option><option>疾走感</option>"), id: 'classes' %>
     <%= submit_tag '検索する'  %>
     <% end %>
     </div>
