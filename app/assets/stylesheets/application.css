@@ -22,7 +22,7 @@
 
 
 #header-list {
-    background-color: #bef183;
+    background-color: #d1ff7b;
     height: 150px;
     display: flex;
     flex-direction:column;
@@ -46,7 +46,7 @@
 footer {
   color: white;
   height: 100px;
-  background-color: #96e3e9;
+  background-color: #45d9df;
   bottom: 0;
   width: 100%;
   display: flex;
@@ -79,7 +79,7 @@ ul{
 }
 
 a:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(58, 185, 194);
   border-bottom: solid;
 }
 

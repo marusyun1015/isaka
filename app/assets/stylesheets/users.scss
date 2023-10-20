@@ -11,6 +11,8 @@
 
 .information{
     margin: 10px;
+    width: 300px;
+    flex-shrink: 0;
 }
 
 .my-yomitai{
@@ -25,6 +27,11 @@
     flex-wrap: wrap;
     width: 600px;
     justify-content: start;
+}
+
+.yonda-hon{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .books-mypage{
